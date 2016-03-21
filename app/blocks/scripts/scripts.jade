@@ -1,0 +1,9 @@
+mixin scripts(scripts)
+	each src in scripts
+		- var isExternalScript = /^(?:https?\:)?\/\//i;
+		- src = isExternalScript.test(src) ? src : '/assets/scripts/' + src;
+		script(src=src)
+
+mixin scriptMap()
+		- src2 ='https://maps.googleapis.com/maps/api/js?key=AIzaSyBTVx7QY_zQd8I3DEmutsiaf4QOf430VT8&callback=initMap'
+		script(src=src2)

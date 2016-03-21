@@ -1,0 +1,28 @@
+mixin top()
+	+b.top&attributes(attributes)
+		+b.inner.clearfix
+			+b().options
+				+b('ul').menu-top.clearfix
+					+e('li').item
+						+e('a').link
+							+b('i').fa.fa-heart
+							+e('span').text Избранные
+							+e('span').value 1
+					+e('li').item
+						+e('a').link
+							+b('i').fa.fa-bar-chart
+							+e('span').text Сравнение товаров
+							+e('span').value 2
+			+b.auth-block.right
+				+b('button').drop-btn.toggle-btn
+				+b('ul').drop-menu.clearfix.toggle-list
+					+e('li').item
+						+e('a').link Вход
+					+e('li').item
+						+e('a').link Регистрация
+				+b('ul').menu-top.clearfix
+					+e('li').item
+						+e('a').link Вход
+					+e('li').item
+						+e('a').link Регистрация
+					//<i class="fa fa-tint"></i>

@@ -1,0 +1,15 @@
+mixin menu()
+	+b('nav').menu&attributes(attributes)
+		+e('ul').list.clearfix
+			+e('li').item
+				+e('a').link(href = "#") Поиск
+					+e('span').notice Все
+			+e('li').item
+				+e('a').link(href = "#") Города
+					+e('span').notice Наши города
+			+e('li').item
+				+e('a').link(href = "#") Частые вопросы
+					+e('span').notice Задайте вопрос
+			+e('li').item
+				+e('a').link(href = "#") Контакты
+					+e('span').notice Напишите нам

@@ -1,0 +1,85 @@
+.sort-products
+	overflow: hidden;
+
+	&__nav
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+
+		&-item
+			display: inline-block
+			margin-right: 10px;
+			
+
+	&__items
+		overflow: hidden;
+	&__list
+		position: relative
+		//transition left 900ms
+		
+	&__item
+		padding: 0 10px;
+		position: relative
+
+
+.product
+/*	border: 1px solid #ddd;*/
+	padding: 5px 12px 25px
+	position: relative
+
+	&__link
+		display: block
+		
+	&__image
+		height: 165px
+		overflow: hidden
+		display: block
+
+	&__img
+		height: auto;
+		max-width: 100%;
+		
+	&__text
+		margin-top: 15px
+		text-align: left;
+		
+	&__price
+		text-align: center
+		margin-top: 50px
+		color: colorOrange
+		font-weight: bold
+		font-size: 18px
+		
+	&__country
+		font-size: 12px
+		margin-top: 15px
+		
+	&__code
+		font-size: 12px
+		margin-top: 3px
+
+	&__quick-view
+		position: absolute;
+		background: #fff
+		font-weight: bold
+		color: colorOrange
+		padding: 10px 18px;
+		bottom: 16px;
+		opacity: 0
+		border: 1px solid #ddd;
+		font-size: 14px
+		transition all 0.7s
+		border-radius 4px
+		transform: scale3d(0, 0, 0) translate3d(0, -115%, 0)
+
+		&:hover
+			background: colorOrange
+			border none
+			color: #fff;
+
+			
+	&:hover .product__quick-view
+		opacity: 1
+		transition all 0.7s
+		cursor: pointer
+		transform: scale3d(1, 1, 1) translate3d(0, 0%, 0)

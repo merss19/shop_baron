@@ -1,0 +1,107 @@
+.logo-menu
+	padding: 15px 0
+	background: colorBlueLigth
+.logo
+	float: left
+	text-align: center
+	
+	&__link
+		display: block
+		sprite $drop
+		margin: 0 auto
+
+	&__text
+		display: block
+		margin-top: 10px
+
+
+		&-head
+			font-size: 48px;
+			font-weight: bold;
+			color colorBlue
+			display: block
+
+			&:hover
+				text-decoration: none
+			
+		&-desc
+			font-size: 14px
+			margin-top: 5px
+
+.phone
+	float: right
+
+	&__img
+		font-size: 20px;
+		margin: 1px 10px 0 0;
+
+	&__group
+		text-align: center;
+		margin-top 25px
+
+	&__tel
+		font-size: 20px
+		margin-top: 10px
+
+	&__desc
+		margin-top: 10px
+
+	&__callback
+		margin-top: 6px
+
+		&-link
+			display: inline;
+			border-bottom: 1px dashed #337ab7;
+
+.main-menu
+	text-align: center
+	margin: 0 auto
+	padding: 15px 0;
+	position: relative
+	
+
+
+	&__item
+		display: inline-block
+		margin-left: 18px;
+		position: relative
+		margin-top: 15px
+
+	&__link
+		cursor: pointer
+		&:after
+			linkHover(20px,colorBlue)
+
+		&:hover
+			color colorBlue
+			text-decoration: none
+
+			&:after
+				color colorBlue
+				text-decoration: none
+				opacity: 1;
+				transform: scale3d(1, 1, 1) translate3d(0, 0%, 0)
+
+@media (min-width: 767px)
+	.logo
+
+		&__link
+			float: left
+
+		&__text
+			float left
+
+	.phone
+
+		&__group
+			float: right
+			margin-top: 0
+
+		&__img
+			float: left;
+
+	.main-menu
+		padding: 40px 0;
+	
+		&__item
+			margin-top: 0px

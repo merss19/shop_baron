@@ -1,0 +1,38 @@
+mixin sort-products(list)
+	+b.sort-products.tabs&attributes(attributes)
+		+e.nav.clearfix
+			+e('ul').nav-list.clearfix
+				each item in list
+					if item.active
+						+e('li').nav-item.tab-item.active-tab
+							+e('a').nav-link.tab-link.btnMain(href = '#{ item.href }') #{ item.sort }
+					else
+						+e('li').nav-item.tab-item
+							+e('a').nav-link.tab-link.btnMain(href = '#{ item.href }') #{ item.sort }
+		each item in list
+			if item.active
+				+e.items.tab-content.active-tab(id ='#{ item.id }')
+					+e('ul').list.clearfix
+						each products in item.products
+							+e('li').item
+								+b.product
+									+e('a').link
+										+e.image
+											+e('img').img(src = '#{ products.preview }' width ="203px" height = "165px")
+									+e.text #{ products.text }
+									//+e.country #{ products.country }
+									//+e.code Код: #{ products.code }
+									+e.price #{ products.price }
+									+e.quick-view Быстрый просмотр
+									+e.group-btn
+										+e.gro
+			else
+				+e.items.tab-content(id ='#{ item.id }')
+					+e('ul').list.clearfix
+						each products in item.products
+							+e('li').item
+								+b.product
+									+e.image
+										+e('img').img(src = '#{ products.preview }')
+									+e.text #{ products.text }
+									+e.price #{ products.price }

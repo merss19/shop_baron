@@ -1,0 +1,17 @@
+include ../tour/tour
+include ../map/map
+include ../filter/filter
+include ../gallery/gallery
+include ../tourFilter/tourFilter
+
+mixin tours()
+	+b('main').inner
+		+map()
+		+filter()
+		+tourFilter()
+		+b.tours
+			+e('h1').title Найдено
+				+e('span').number
+			+e.list.clearfix
+		+tour()
+		+gallery()

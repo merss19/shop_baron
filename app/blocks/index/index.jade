@@ -1,0 +1,56 @@
+include ../content/content
+include ../container/container
+include ../subtitle/subtitle
+include ../heading/heading
+include ../menu/menu
+include ../tours/tours
+include ../blocks/blocks
+include ../sort-products/sort-products
+include ../side-products/side-products
+include ../footer/footer
+
+mixin index()
+	+b.content
+		+b.inner.clearfix
+			+b.content__side.col-25
+				+e.item
+					+side-products(getData('sort-products'))
+			+b.content__main.col-75
+				+e.item
+					+blocks()
+				+e.item
+					+sort-products(getData('sort-products'))
+	+footer()
+	//+b.index
+		+content()
+			.index__group
+				+subtitle()
+					| ЧТО В КОРОБКЕ
+
+			+heading()
+				| Инструменты
+
+			.index__group
+				+list(getData('tools'))
+
+			.index__group
+				+subtitle()
+					| СТРУКТУРА ФАЙЛОВ
+
+			+container()
+				+col()
+					+heading()
+						| Исходники
+					+tree(getData('source-tree'))
+
+				+col()
+					.index__arrow
+						+arrow()
+							| Сборка
+
+				+col()
+					+heading()
+						| Готовые файлы
+					+tree(getData('build-tree'))
+
+			+fork()

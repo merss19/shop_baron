@@ -1,0 +1,51 @@
+// Clear the float on any element.
+clearfix()
+	&:after
+		display table
+		clear both
+		content ''
+
+// Fix no working `-webkit-text-size-adjust: 100%;` in Android.
+fix-text-size-adjust()
+	background-image linear-gradient(transparent, transparent)
+
+// Set element size
+size($width, $height = $width)
+	width $width
+	height $height
+
+sizeWH($width, $height)
+	width $width
+	height $height
+
+// Set margin on left & right
+margin-x($margin)
+	margin-left $margin
+	margin-right $margin
+
+// Set margin on top & bottom
+margin-y($margin)
+	margin-top $margin
+	margin-bottom $margin
+
+// Set pading on left & right
+padding-x($padding)
+	padding-left $padding
+	padding-right $padding
+
+// Set padding on top & bottom
+padding-y($padding)
+	padding-top $padding
+	padding-bottom $padding
+
+linkHover($top,$color)
+	position: absolute;
+	top: $top
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: $color
+	content: '';
+	opacity: 0;
+	transition: all 0.4s, transform 0.4s;
+	transform: scale3d(0, 0, 0) translate3d(0, -115%, 0)

@@ -1,0 +1,64 @@
+.gallery
+	background rgba(0, 0, 0, 0.7)
+	bottom 0
+	left 0
+	overflow auto
+	position fixed
+	right 0
+	top 0
+	z-index 1
+
+	&__close
+		color #fff
+		cursor pointer
+		font-size 40px
+		position absolute
+		right 1ex
+		text-align center
+		top 0.5ex
+
+	&__preview
+		margin-top 60px
+		max-height 600px
+		min-height 300px
+		text-align center
+		vertical-align middle
+		width 100%
+
+	&__controls
+		text-align center
+		margin-bottom 30px
+
+
+	&__thumbnails
+		display inline-block
+		height 40px
+		margin-top 20px
+		min-width 200px
+		vertical-align middle
+
+		img
+			border solid 5px transparent
+			vertical-align middle
+
+		img.selected
+			border-color white
+
+	&__control
+		background url('../img/control-sprite.png') no-repeat
+		cursor pointer
+		display inline-block
+		height 40px
+		margin-top 30px
+		opacity 0.3
+		vertical-align middle
+		width 40px
+
+		&:hover
+			opacity 1
+
+		&:active
+			transform translate(0, 1px)
+
+		&_right
+			background-position -40px

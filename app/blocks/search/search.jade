@@ -1,0 +1,9 @@
+mixin search()
+	+b.search&attributes(attributes)
+		+e('input').input(
+						type='text'
+						name = 'search'
+						value='Поиск товара'
+						)
+		+e('button').button
+			+e('i').icon.fa.fa-search

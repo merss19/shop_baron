@@ -1,0 +1,24 @@
+include ../felixexter/felixexter
+
+mixin footer()
+	+b.footer.clearfix&attributes(attributes)
+		+b.inner
+			+b.footer-column.col-sm-12.col-md-5
+				+e('ul').list
+					each val in ['Доставка и оплата', 'Установка', 'Как сделать заказ','О компании']
+						+e('li').item
+							+e('a').link=val
+			+b.footer-column.col-sm-12.col-md-5
+				+e('ul').list
+					each val in ['Мой профиль', 'История заказов', 'Избранное','Карта сайта']
+						+e('li').item
+							+e('a').link=val
+			+b.footer-column.col-sm-12.col-md-5
+				+e('ul').list
+					each val in ['Бренды', 'Подарочные сертификаты', 'Партнерская программа','Акции']
+						+e('li').item
+							+e('a').link=val
+
+			+b.footer-column.col-sm-12.col-md-9 rty
+
+			+b.public.col-sm-24 Все предложения опубликованые на сайте не являются публичной офертой

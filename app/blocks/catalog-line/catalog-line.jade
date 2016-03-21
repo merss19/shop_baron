@@ -1,0 +1,18 @@
+mixin catalog-line(catalog)
+	- var page = 1
+	case page
+		when 1
+			+b('nav').catalog.disabled.col-25.clearfix
+				+e('button').button.toggle-btn Каталог
+					+e('span').button-bars
+				+e('ul').list.toggle-list
+					each item in catalog
+						+e('li').list-item
+							+e('a').list-link #{ item[0] }
+						if item[1]
+							+e('ul').child-list
+								each val in item[1]
+									+e('li').child-item
+										+e('a').child-link #{ val }
+		default
+			p 123

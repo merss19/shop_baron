@@ -1,0 +1,141 @@
+[
+  {
+	"sort": "Хит продаж",
+	"id":"hit",
+	"href":"#hit",
+	"active":"active-tab",
+	"products":[
+		{
+		"price": "4800 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"country": "Германия",
+		"code": "573820",
+		"preview": "assets/images/products/faucet-1.png"
+		},
+		{
+		"price": "5600 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"country": "Германия",
+		"code": "573820",
+		"preview": "assets/images/products/faucet-2.png"
+		},
+		{
+		"price": "3200",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"country": "Германия",
+		"code": "573820",
+		"preview": "assets/images/products/faucet-4.png"
+		},
+		{
+		  "price": "2750",
+		  "text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		  "country": "Германия",
+		  "code": "573820",
+		  "preview": "assets/images/products/faucet-4.png"
+		},
+	  {
+		"price": "3200",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"country": "Германия",
+		"code": "573820",
+		"preview": "assets/images/products/faucet-4.png"
+	  },
+	  {
+		"price": "2750",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"country": "Германия",
+		"code": "573820",
+		"preview": "assets/images/products/faucet-4.png"
+	  }
+	]
+  },
+  {
+	"sort": "Последние",
+	"id":"last",
+	"href":"#last",
+	"products":[
+	  {
+		"price": "3400",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-1.png"
+	  },
+	  {
+		"price": "5450",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душ",
+		"preview": "assets/images/products/faucet-2.png"
+	  },
+	  {
+		"price": "2300 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-4.png"
+	  },
+	  {
+		"price": "2900",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-2.png"
+	  },
+	  {
+		"price": "5450",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душ",
+		"preview": "assets/images/products/faucet-2.png"
+	  },
+	  {
+		"price": "2300 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-4.png"
+	  },
+	  {
+		"price": "2900",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-2.png"
+	  }
+	]
+  },
+  {
+	"sort": "Популярные",
+	"id":"popular",
+	"href":"#popular",
+	"products":[
+	  {
+		"price": "7200 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-1.png"
+	  },
+	  {
+		"price": "3300 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-2.png"
+	  },
+	  {
+		"price": "4100 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-4.png"
+	  },
+	  {
+		"price": "4500",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-1.png"
+	  },
+	  {
+		"price": "7200 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-1.png"
+	  },
+	  {
+		"price": "3300 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-2.png"
+	  },
+	  {
+		"price": "4100 руб",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-4.png"
+	  },
+	  {
+		"price": "4500",
+		"text": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+		"preview": "assets/images/products/faucet-1.png"
+	  }
+	]
+  }
+]

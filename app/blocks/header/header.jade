@@ -1,0 +1,21 @@
+include ../logo-menu/logo-menu
+include ../top/top
+include ../menu/menu
+include ../search/search
+include ../cart/cart
+include ../catalog-line/catalog-line
+
+mixin header()
+	+b('header').header
+		+top()
+		+logo-menu()
+		+b.catalog-line
+			+b.inner.clearfix
+				+catalog-line(getData('catalog'))
+				+b.search-line.col-55
+					+search()
+				+b.cart-line.col-20
+					+cart()
+		//+menu
+
+

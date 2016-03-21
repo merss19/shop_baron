@@ -1,0 +1,75 @@
+.catalog-line
+	width: 100%
+	height: auto
+
+.catalog
+
+	&__button
+		width: 100%
+		background: colorOrange
+		padding: 12px 16px;
+		border: none;
+		color: #fff;
+		font-weight: bold;
+		letter-spacing: 1px;
+		text-align: left;
+		font-size: 16px
+		position: relative
+		border-radius: 5px 5px 0 0;
+		height: 48px
+
+		&-bars
+			sizeWH(25px,2px)
+			display: block;
+			background: #fff;
+			float: right;
+			position: relative
+			top: 12px
+
+			&:before
+				content: ''
+				sizeWH(25px,2px)
+				display: block
+				position: absolute
+				top -7px
+				background: #fff
+
+			&:after
+				content: ''
+				sizeWH(25px,2px)
+				display: block
+				position: absolute
+				top 7px
+				background: #fff
+		
+	&__list
+		width: 100%;
+		border: 1px solid #ddd;
+		border-radius: 0px 0px 4px 4px;
+		background: #fff
+		font-size: 14px;
+		text-align: left;
+		border 1px solid colorOrange
+
+		&-item
+			padding: 0
+			border-top: 1px solid colorGreyLigth
+
+		&-link
+			padding: 12px 16px;
+			display: block;
+			color colorGrey
+			cursor: pointer
+			
+			&:hover
+				background: colorGreyLigth
+				transition: all 0.3s
+				text-decoration: none
+
+	&__child-list
+		display: none
+		
+		&-item
+			padding: 0
+		&_link
+			padding: 5px 12px

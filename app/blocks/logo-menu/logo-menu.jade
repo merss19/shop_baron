@@ -1,0 +1,23 @@
+mixin logo-menu()
+	+b.logo-menu&attributes(attributes)
+		+b.inner.clearfix
+			+b().logo.clearfix.col-xs-24.col-md-6
+				+e('a').link.learfix
+				+e.text.clearfix
+					+e.text-head(href = 'detail.html') Барон
+					+e.text-desc Магазин сантехники
+			+b().phone.clearfix.col-xs-24.col-md-6
+				+e.group
+					+e.tel.clearfix
+						+e('i').img.fa.fa-phone-square
+						+e('span') 8(812)310 32 32
+					+e.desc с 10:00 до 20:00
+					+e.callback
+						+e('a').callback-link Заказать звонок
+			+b('ul').main-menu.clearfix.col-xs-24.col-md-12
+				+e('li').item
+					+e('a').link О компании
+				+e('li').item
+					+e('a').link Доставка и оплата
+				+e('li').item
+					+e('a').link Контакты
