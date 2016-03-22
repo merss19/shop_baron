@@ -5,16 +5,17 @@ include ../search/search
 include ../cart/cart
 include ../catalog-line/catalog-line
 
-mixin header()
+mixin header(page)
 	+b('header').header
 		+top()
 		+logo-menu()
 		+b.catalog-line
 			+b.inner.clearfix
-				+catalog-line(getData('catalog'))
-				+b.search-line.col-55
+				+b.col-sm-6
+					+catalog-line(getData('catalog'),page)
+				+b.search-line.col-sm-12
 					+search()
-				+b.cart-line.col-20
+				+b.cart-line.col-sm-6
 					+cart()
 		//+menu
 

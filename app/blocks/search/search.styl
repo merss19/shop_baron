@@ -1,5 +1,5 @@
 .search-line
-	padding: 0px 20px;
+	margin: 20px 0
 
 .search
 	position: relative
@@ -17,3 +17,17 @@
 		top: 0;
 		padding: 5px 20px;
 		height: 48px;
+		border: 1px solid colorBlue
+		background: colorBlue
+		border-radius: 0 borderRadius borderRadius 0;
+		color #fff
+
+
+		&:hover
+			background: #fff
+			color colorBlue
+
+@media (min-width: 768px)
+	.search-line
+		margin 0
+		padding: 0px 20px;

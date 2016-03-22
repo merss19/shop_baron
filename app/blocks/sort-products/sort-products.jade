@@ -12,7 +12,7 @@ mixin sort-products(list)
 		each item in list
 			if item.active
 				+e.items.tab-content.active-tab(id ='#{ item.id }')
-					+e('ul').list.clearfix
+					+e('ul').list.clearfix#car.owl-carousel
 						each products in item.products
 							+e('li').item
 								+b.product
@@ -36,3 +36,4 @@ mixin sort-products(list)
 										+e('img').img(src = '#{ products.preview }')
 									+e.text #{ products.text }
 									+e.price #{ products.price }
+									+e.quick-view Быстрый просмотр

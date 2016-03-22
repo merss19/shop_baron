@@ -1,5 +1,6 @@
 .sort-products
 	overflow: hidden;
+	margin-top: 45px;
 
 	&__nav
 		width: 100%
@@ -9,17 +10,58 @@
 		&-item
 			display: inline-block
 			margin-right: 10px;
-			
+
+		&-link
+			text-decoration: none
+			&:hover
+				text-decoration: none
+			&:focus
+				text-decoration: none
 
 	&__items
 		overflow: hidden;
 	&__list
 		position: relative
-		//transition left 900ms
+
 		
 	&__item
 		padding: 0 10px;
 		position: relative
+
+	.owl-buttons
+		position: relative
+		text-align: center
+
+	.owl-prev
+		display: inline-block;
+		margin-right: -1px;
+
+		&:before
+			content: "";
+			width: 0;
+			height: 0;
+			display: block
+			border-top: 10px solid transparent;
+			border-left: 20px solid colorBlue;
+			border-bottom: 10px solid transparent;
+			position: relative;
+			top: 1px;
+			left: 0;
+
+	.owl-next
+		display: inline-block;
+
+		&:after
+			content: "";
+			width: 0;
+			height: 0;
+			display: block
+			border-top: 10px solid transparent;
+			border-right: 20px solid colorBlue;
+			border-bottom: 10px solid transparent;
+			position: relative;
+			top: 1px;
+			left: -45px;
 
 
 .product
@@ -74,7 +116,7 @@
 
 		&:hover
 			background: colorOrange
-			border none
+			border 1px solid colorOrange
 			color: #fff;
 
 			
