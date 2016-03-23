@@ -1,0 +1,33 @@
+.info-customer
+	padding: 0 20px
+	
+	&__header
+		header-3(colorBlue)
+		
+	&__list
+		border: 1px solid #337ab7;
+	&__item
+		width: 100%
+		padding: 10px
+
+	&__icon
+		float: left
+		
+	&__text
+		float: left
+		cursor: pointer
+		width: auto
+
+		&:after
+			linkHover(20px,colorBlue)
+
+		&:hover
+			text-decoration: none
+
+			&:after
+				color #fff
+				text-decoration: none
+				opacity: 1;
+				transform: scale3d(1, 1, 1) translate3d(0, 0%, 0)
+.action-group
+	padding-left: 20px

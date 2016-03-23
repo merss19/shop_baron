@@ -104,10 +104,45 @@ $(document).ready(function() {
 		itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option*/
 	});
 
+   $('.gallery__items ').mouseover(function(e){
+	   console.log($('.gallery-modal'));
+	   let target = e.target;
+	   let gallery = target.closest('.gallery');
+	   let img = $(gallery);
+	   let imageMain = img.find('.gallery__main-img');
+	   let imageMainSrc = imageMain.attr('src');
+	   let targetSrc = $(target).attr('src');
+	   imageMain.attr('src',targetSrc);
+
+   })
+
+	$('.gallery__main').on('click',function(){
+		let gallery = $('.gallery-modal');
+		gallery.removeClass('hidden');
+
+		let thumbnails = $('.gallery-modal__thumbnails');
+		console.log(thumbnails);
+
+		$(gallery).on('click',function(e){
+			let target = e.target;
+			let preview = $('.gallery-modal__preview-img');
+			let previewSrc = $(preview).attr('src');
+			let targetClass = $(target).attr('class');
+
+			if (targetClass == 'gallery-modal__thumbnails-images'){
+				let targetSrc = $(target).attr('src');
+				preview.attr('src',targetSrc);
+				console.log(previewSrc);
+			}else{
+				gallery.addClass('hidden');
+			}
+
+		})
+
+	})
+
 
 });
-
-
 
 
 

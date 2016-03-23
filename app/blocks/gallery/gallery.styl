@@ -1,4 +1,72 @@
 .gallery
+
+	&__items
+		float: left
+
+	&__block
+		max-width: 150px;
+		float: left
+		overflow: hidden;
+		max-height: 120px;
+		border: 1px colorGreyLigth solid;
+		border-right: none;
+		border-top: none
+
+
+	&__main
+		border: 1px colorGreyLigth solid;
+		text-align: center;
+		overflow: hidden;
+		min-height: 360px;
+		max-height:360px;
+		&-img
+			max-width: 450px
+			height: auto
+			width: 100%
+			cursor: pointer
+
+	&__img
+		max-width: 150px;
+		width: 100%
+		height: auto;
+		cursor: pointer
+
+.gallery-modal
+	background: rgba(0,0,0,0.7);
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	text-align: center
+
+	&__preview
+		margin-top: 60px;
+		min-height: 300px;
+		text-align: center;
+		vertical-align: middle;
+		width: 100%
+		max-height: 405px;
+		overflow: hidden;
+
+		&-img
+			max-width: 500px;
+			width: 100%;
+
+	&__thumbnails
+		display: inline-block;
+		height: 60px;
+		margin-top: 20px;
+		min-width: 200px;
+		vertical-align: middle;
+
+		&-images
+			max-height: 60px
+			cursor: pointer
+	/*
+.gallery
 	background rgba(0, 0, 0, 0.7)
 	bottom 0
 	left 0
@@ -61,4 +129,4 @@
 			transform translate(0, 1px)
 
 		&_right
-			background-position -40px
+			background-position -40px*/

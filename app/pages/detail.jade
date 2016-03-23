@@ -1,6 +1,10 @@
-include /blocks/index/index
+include /blocks/detail/detail
 extends /blocks/layout-default/layout-default
 block head
    - var pageTitle = 'Туры по России';
+
+block header
+   +header('detail')
+
 block content
-   +menu()
+   +detail()

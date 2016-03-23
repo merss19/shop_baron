@@ -1,9 +1,21 @@
+
+
 mixin gallery()
-	+b.gallery.hidden&attributes(attributes)
-		+e.close &times;
-		+e.name
-		+e.preview
-		+e.controls
-		+e.control_left
-		+e.thumbnails
-		+e.control_right
+	+b.gallery.clearfix
+		+e.main
+			+e('img').main-img(src = 'assets/images/products/faucet-1.png')
+		+e.items
+			+e.block
+				+e('img').img(src = 'assets/images/products/faucet-2.png')
+			+e.block
+				+e('img').img(src = 'assets/images/products/faucet-4.png')
+			+e.block
+				+e('img').img(src = 'assets/images/products/faucet-1.png')
+
+		+b.gallery-modal.hidden
+			+e.name
+			+e.preview
+				+e.preview-img(src = 'assets/images/products/faucet-1.png')
+			+e.thumbnails
+				+e('img').thumbnails-images(src = 'assets/images/products/faucet-1.png')
+				+e('img').thumbnails-images(src = 'assets/images/products/faucet-2.png')

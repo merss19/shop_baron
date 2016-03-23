@@ -1,0 +1,16 @@
+mixin info-customer()
+	+b.info-customer&attributes(attributes)
+		+e('h3').header Информация для покупателя
+		+e('ul').list
+			+e('li').item.clearfix
+				+e.icon.fa.fa-car.col-sm-3
+				+e('a').text.col-sm-20 Доставка
+			+e('li').item.clearfix
+				+e.icon.fa.fa-car.col-sm-3
+				+e('a').text.col-sm-20 Установка
+			+e('li').item.clearfix
+				+e.icon.fa.fa-car.col-sm-3
+				+e('a').text.col-sm-20 Подъем на этаж
+			+e('li').item.clearfix
+				+e.icon.fa.fa-car.col-sm-3
+				+e('a').text.col-sm-20 Оплата
