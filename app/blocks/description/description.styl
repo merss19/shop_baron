@@ -1,3 +1,26 @@
 .description
-	font-size 18px
-	text-align center
+	padding: 0 20px;
+	&__nav
+		&-list
+			border-bottom: 1px solid colorBlue
+			height: 42px;
+		&-item
+			float: left
+			margin-bottom: -1px;
+			margin-right: 5px;
+			height: 42px;
+
+			&:first-child
+				margin-left: 30px;
+
+		&-link
+			border: 1px solid colorBlue
+			border-bottom: none
+			padding: 10px 15px
+			display: block
+			background: #fff;
+			height: 35px;
+
+	&__items
+		border: 1px solid colorBlue
+		border-top: none

@@ -1,9 +1,24 @@
 mixin action-group()
 	+b.action-group
-		+e.price 5450 руб
-		+e.cart
-			+e('a').link В корзину
-		+e.cart
-			+e('a').link В сравнение
-		+e.cart
-			+e('a').link В избранные
+		+e.btn
+			+e.price 5450 руб
+			+e.cart
+				+e('a').link В корзину
+			+e.cart
+				+e('a').link В сравнение
+			+e.cart
+				+e('a').link В избранные
+		+e.pay
+			+e.pay-head Способы оплаты:
+			+e.pay-desc Вы можете оплатить этот товар любым способом, доступным в России:
+			+e('ul').pay-list.clearfix
+				+e.pay-item.sber
+				+e.pay-item.web
+				+e.pay-item.visa
+				+e.pay-item.master
+				+e.pay-item.alfa
+				+e.pay-item.easy
+				+e.pay-item.vtb
+				+e.pay-item.paypal
+				+e.pay-item.rapida
+		+e.buy-click(data-toggle="modal",data-target="#call-back") Купить в 1 клик

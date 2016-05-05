@@ -3,27 +3,29 @@ mixin catalog-line(catalog,page)
 	case page
 		when 'index'
 			+b('nav').catalog.disabled.clearfix
-				+e('button').button.toggle-btn Каталог
+				+e('button').button#catalog-drop Каталог
 					+e('span').button-bars
-				+e('ul').list.toggle-list
+				+e('ul').list
 					each item in catalog
 						+e('li').list-item
-							+e('a').list-link #{ item[0] }
-						if item[1]
-							+e('ul').child-list
-								each val in item[1]
-									+e('li').child-item
-										+e('a').child-link #{ val }
+							+e('a').list-link(href = "category.html") #{ item[0] }
+								+e('span').list-label Акция
+							if item[1]
+								+e('ul').child-list
+									each val in item[1]
+										+e('li').child-item
+											+e('a').child-link= val
 		default
-			+b('nav').catalog.clearfix
-				+e('button').button.toggle-btn Каталог
+			+b('nav').catalog.clearfix.dropdown
+				+e('button').button#catalog-drop(data-toggle="dropdown") Каталог
 					+e('span').button-bars
-				+e('ul').list.toggle-list
+				+e('ul').list.dropdown-menu(aria-labelledby="catalog-drop")
 					each item in catalog
 						+e('li').list-item
 							+e('a').list-link #{ item[0] }
-						if item[1]
-							+e('ul').child-list
-								each val in item[1]
-									+e('li').child-item
-										+e('a').child-link #{ val }
+								+e('span').list-label Акция
+							if item[1]
+								+e('ul').child-list
+									each val in item[1]
+										+e('li').child-item
+											+e('a').child-link= val

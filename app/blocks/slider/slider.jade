@@ -1,0 +1,11 @@
+include ../owl-btns/owl-btns
+mixin slider()
+	+b.slider__list.owl-carousel
+		+e.item
+			+e('img').img(src = 'assets/images/slider/san-1.jpg')
+		+e.item
+			+e('img').img(src = 'assets/images/slider/san-4.jpg')
+		+e.item
+			+e('img').img(src = 'assets/images/slider/san-5.jpg')
+
+	+owl-btns()

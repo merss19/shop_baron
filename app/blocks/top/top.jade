@@ -13,9 +13,9 @@ mixin top()
 							+b('i').fa.fa-bar-chart
 							+e('span').text Сравнение товаров
 							+e('span').value 2
-			+b.auth-block.right
-				+b('button').drop-btn.toggle-btn
-				+b('ul').drop-menu.clearfix.toggle-list
+			+b.auth-block.right.dropdown
+				+b('button')#auth-drop.drop-btn(data-toggle="dropdown")
+				+b('ul').drop-menu.clearfix.dropdown-menu(aria-labelledby="auth-drop")
 					+e('li').item
 						+e('a').link Вход
 					+e('li').item
@@ -25,4 +25,3 @@ mixin top()
 						+e('a').link Вход
 					+e('li').item
 						+e('a').link Регистрация
-					//<i class="fa fa-tint"></i>

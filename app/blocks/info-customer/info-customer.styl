@@ -1,22 +1,58 @@
 .info-customer
-	padding: 0 20px
+	padding: 0 10px
 	
 	&__header
 		header-3(colorBlue)
 		
 	&__list
-		border: 1px solid #337ab7;
-	&__item
-		width: 100%
-		padding: 10px
+		border: 1px solid colorBlue
+		padding: 0 10px
 
 	&__icon
-		float: left
+		color: colorOrange
+		
+	&__item
+		width: 100%
+		padding: 14px 15px
+		text-align: center;
+		border-bottom: 1px solid colorBlue
+
+		&:last-child
+			border-bottom: none;
+
+			
+		&-left
+			width: 190px
+			display: inline-block;
+			text-align: left
+
+		&-rigth
+			display: inline-block
+			width: 100px
+			text-align: right
+
+	&__watch
+		cursor: pointer
+		position: relative
+		border-bottom: 1px dashed colorBlue;
+
+		&:after
+			linkHover(21px,colorBlue)
+
+		&:hover
+			text-decoration: none
+
+			&:after
+				color #fff
+				text-decoration: none
+				opacity: 1;
+				transform: scale3d(1, 1, 1) translate3d(0, 0%, 0)
 		
 	&__text
-		float: left
 		cursor: pointer
 		width: auto
+		display: inline-block
+		margin-rigth: 5px;
 
 		&:after
 			linkHover(20px,colorBlue)
@@ -31,3 +67,5 @@
 				transform: scale3d(1, 1, 1) translate3d(0, 0%, 0)
 .action-group
 	padding-left: 20px
+
+//@media (min-width: 767px)

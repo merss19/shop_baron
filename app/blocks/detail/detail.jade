@@ -3,29 +3,23 @@ include ../breadcrumb/breadcrumb
 include ../info-product/info-product
 include ../info-customer/info-customer
 include ../action-group/action-group
+include ../description/description
 include ../footer/footer
 
 mixin detail()
+	-var bread  = ['Смесители','Смеситель Grohe Eurosmart 33300001 для ванны с душем']
 	+b.content
 		+b.inner.clearfix
 			+b.content__item.clearfix
-				+breadcrumb()
+				+breadcrumb(bread)
 			+b('h1').header-product Смеситель Grohe Eurosmart 33300001 для ванны с душем
-			+b.content__item.clearfix.col-sm-12
+			+b.content__item.clearfix
 				+gallery()
-			+b.content__item.clearfix.col-sm-12
-				+action-group()
-				//+info-product(getData('info-product'))
+				+b.col-sm-6
+					+action-group()
+			+b.content__item.clearfix
+				+info-product(getData('info-product'))
 				+info-customer()
-
-	//+b.content
-		+b.inner.clearfix
-			+b.content__side.col-25
-				+e.item
-					+side-products(getData('sort-products'))
-			+b.content__main.col-75
-				+e.item
-					+blocks()
-				+e.item
-					+sort-products(getData('sort-products'))
+			+b.content__item.clearfix
+				+description()
 	+footer()

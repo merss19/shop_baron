@@ -1,0 +1,10 @@
+include /blocks/category/category
+extends /blocks/layout-default/layout-default
+block head
+   - var pageTitle = 'Вся сантехника';
+
+block header
+   +header('category')
+
+block content
+   +category()

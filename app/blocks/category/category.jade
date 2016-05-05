@@ -1,0 +1,11 @@
+include ../breadcrumb/breadcrumb
+include ../filter/filter
+
+mixin category()
+	-var bread  = ['Смесители']
+	+b.content
+		+b.inner.clearfix
+			+b.content__item.clearfix
+				+breadcrumb(bread)
+			+b.content__side.col-sm-3
+				+filter()

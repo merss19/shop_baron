@@ -1,18 +1,17 @@
-mixin side-products(list)
+mixin side-products(list,name)
 	+b.side-products&attributes(attributes)
-		+e('h3') Распродажа
-		+e.content#side
-			+b.my-carousel__nav
-				+b('a').next Next
-				+b('a').prev Prev
-			+e('ul').list.clearfix.my-carousel
+		+e().head
+			+e('h3').head-text=name
+		+e.content
+			+e('ul').list.clearfix.owl-carousel
 				each item in list
 					each products in item.products
 						+b('li').product-side.clearfix
 							+e('a').link
 								+e('img').img(src = '#{ products.preview }' width ="100px" height = "80px")
 							+e('h3').text
-								+e('a').text-link #{ products.text }
+								+e().text-link #{ products.text }
 							+e.price.clearfix
 								+e('s').price-old #{ products.price }
 								+e.price-new 1800 руб
+			+owl-btns()

@@ -1,12 +1,23 @@
 mixin filter()
 	+b.filter&attributes(attributes)
-		+e.group
+		+e.title Поиск по параметрам
+		+e('form').form
+			+e.form-item
+				+e.form-top.toggle-btn.filter-drop Цена
+				+e.form-bottom.toggle-list.slider sdfadf
+					//+b.slider__scale
+						//+b.slider__drag
+						//+b('span').slider__min 0
+						//+b('span').slider__max 500
+					+b('input')(type="text" id="sl" name="sl" value="")
+
+		//+e.group
 			+e('label') Город
 			+e('input').city
-		+e.group
+		//+e.group
 			+e('label') Количество дней
 			+e('input').days
-		+e.group
+		//+e.group
 			+e('label') Количество дней
 			+e('input').date
-		+e('button').submit Найти
+		//+e('button').submit Найти

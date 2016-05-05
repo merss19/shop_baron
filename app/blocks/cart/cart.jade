@@ -1,7 +1,42 @@
 mixin cart()
-	+b.cart&attributes(attributes)
-		+e('button').button
+	+b.cart.dropdown
+		+e('button').button#cart-drop(data-toggle="dropdown")
 			+e('i').icon.fa.fa-shopping-cart
 			+e.text
 				+e.products Количество - 1
 				+e.price Сумма - 12 000 руб.
+		+e().content.clearfix.dropdown-menu(aria-labelledby="cart-drop")
+			+e.list
+				+e.item.clearfix
+					+e('a').picture
+						+e('img').img(src = 'assets/images/products/faucet-1.png' width ="60px" height = "60px")
+					+e.info
+						+e('h3').info-name
+							+e('a').info-link Смеситель Grohe Eurosmart 33300001 для ванны с душем
+						+e.result
+							+e('span').result-quantity 1
+							+e('span').result-cross x
+							+e('span').result-sum 3300
+							+e('span').result-currency руб
+						+e.delete.fa.fa-times
+				+e.item.clearfix
+					+e('a').picture
+						+e('img').img(src = 'assets/images/products/faucet-1.png' width ="60px" height = "60px")
+					+e.info
+						+e('h3').info-name
+							+e('a').info-link Смеситель Grohe Eurosmart 33300001 для ванны с душем
+						+e.result
+							+b('span').quantity 1
+							+b('span').cross x
+							+b('span').sum 3300
+							+b('span').currency руб
+						+e.delete.fa.fa-times
+				+e.total.clearfix
+					+e.total-text Сумма:
+					+e.total-sum
+						+b('span').number 3300
+						+b('span').currency руб
+
+				+e.btn.clearfix
+					+e.view-cart Просмотр корзины
+					+e.checkout  Оформление заказа

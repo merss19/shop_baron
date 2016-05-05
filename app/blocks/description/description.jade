@@ -1,3 +1,32 @@
 mixin description()
-	+b('p').description&attributes(attributes)
-		block
+	+b.description.tabs&attributes(attributes)
+		+e.nav.clearfix
+			+e('ul').nav-list.clearfix
+					+e('li').nav-item.tab-item.active-tab
+						+e('a').nav-link.tab-link(href = '#desc')
+							+e('i').icon.fa.fa-file-text-o
+							+e('span').text Описание
+					+e('li').nav-item.tab-item
+						+e('a').nav-link.tab-link(href = '#feature')
+							+e('i').icon.fa.fa-list
+							+e('span').text Характеристики
+					+e('li').nav-item.tab-item
+						+e('a').nav-link.tab-link(href = '#kit')
+							+e('i').icon.fa.fa-comment-o
+							+e('span').text Комплектация
+					+e('li').nav-item.tab-item
+						+e('a').nav-link.tab-link(href = '#reviews')
+							+e('i').icon.fa.fa-comment-o
+							+e('span').text Отзывы
+		+e#desc.items.tab-content.active-tab
+			+e('ul').list.clearfix
+				+e('li').item Описание
+		+e#feature.items.tab-content
+			+e('ul').list.clearfix
+				+e('li').item Характеристики
+		+e#kit.items.tab-content
+			+e('ul').list.clearfix
+				+e('li').item Комплектация
+		+e#reviews.items.tab-content
+			+e('ul').list.clearfix
+				+e('li').item Отзывы

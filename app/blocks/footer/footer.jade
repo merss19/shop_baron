@@ -3,22 +3,32 @@ include ../felixexter/felixexter
 mixin footer()
 	+b.footer.clearfix&attributes(attributes)
 		+b.inner
-			+b.footer-column.col-sm-12.col-md-5
+			+b.footer-column.col-xs-12.col-sm-3
 				+e('ul').list
 					each val in ['Доставка и оплата', 'Установка', 'Как сделать заказ','О компании']
 						+e('li').item
 							+e('a').link=val
-			+b.footer-column.col-sm-12.col-md-5
+			+b.footer-column.col-xs-12.col-sm-3
 				+e('ul').list
 					each val in ['Мой профиль', 'История заказов', 'Избранное','Карта сайта']
 						+e('li').item
 							+e('a').link=val
-			+b.footer-column.col-sm-12.col-md-5
+			+b.footer-column.col-xs-12.col-sm-3
 				+e('ul').list
 					each val in ['Бренды', 'Подарочные сертификаты', 'Партнерская программа','Акции']
 						+e('li').item
 							+e('a').link=val
-
-			+b.footer-column.col-sm-12.col-md-9 rty
-
-			+b.public.col-sm-24 Все предложения опубликованые на сайте не являются публичной офертой
+			+b.footer-column.col-xs-12.col-sm-3
+				+b.contacts
+					+e.head Контакты
+					+e('p').address г.Санкт-Петербург, Нарвский пр., д. 25.
+					+b().phone.clearfix
+						+e.group
+							+e.tel.clearfix
+								+e('i').img.fa.fa-phone-square
+								+e('span').number 8(812)310 32 32
+							+e.desc с 10:00 до 20:00
+							+e.callback
+								+e('a').callback-link(data-toggle="modal")(data-target="#call-back") Заказать звонок
+			+b.public.col-sm-12
+				+e.text Все предложения опубликованые на сайте не являются публичной офертой

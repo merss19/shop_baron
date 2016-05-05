@@ -1,23 +1,38 @@
 mixin logo-menu()
 	+b.logo-menu&attributes(attributes)
 		+b.inner.clearfix
-			+b().logo.clearfix.col-xs-24.col-md-6
+			+b().logo.clearfix.col-xs-12.col-md-3
 				+e('a').link.learfix
 				+e.text.clearfix
 					+e.text-head(href = 'detail.html') Барон
 					+e.text-desc Магазин сантехники
-			+b().phone.clearfix.col-xs-24.col-md-6
+			+b().phone.clearfix.col-xs-12.col-md-3
 				+e.group
 					+e.tel.clearfix
 						+e('i').img.fa.fa-phone-square
-						+e('span') 8(812)310 32 32
+						+e('span').number 8(812)310 32 32
 					+e.desc с 10:00 до 20:00
 					+e.callback
-						+e('a').callback-link Заказать звонок
-			+b('ul').main-menu.clearfix.col-xs-24.col-md-12
+						+e('a').callback-link(data-toggle="modal",data-target="#call-back") Заказать звонок
+			+b('ul').main-menu.clearfix.col-xs-12.col-md-6
 				+e('li').item
 					+e('a').link О компании
 				+e('li').item
 					+e('a').link Доставка и оплата
 				+e('li').item
 					+e('a').link Контакты
+
+	//modal
+	+b.modal.fade#call-back(tabindex="-1",role="dialog",aria-labelledby="myModalLabel")
+		+b.modal-dialog(role="document")
+			+b.modal-content
+				+b.modal-header
+					//+b('button').close(type="button")(data-dismiss="modal")(aria-label="Close")
+						+b('span')(aria-hidden="true") &times;
+					+b('h4').modal-title#myModalLabel Мы вам перевзвоним!
+				+b.modal-body
+					+b.call-back__info
+						+e('input').info-item.call-back-name(placeholder="Ваше имя",type="text")
+						+e('input').info-item.call-back-phone(placeholder="Ваш телефон",type="tel")
+				+b.modal-footer
+					+b('input').call-back__btn(type="submit",data-dismiss="modal",value="Заказать звонок",disabled)

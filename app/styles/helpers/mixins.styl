@@ -38,29 +38,108 @@ padding-y($padding)
 	padding-top $padding
 	padding-bottom $padding
 
+
 linkHover($top,$color)
-	position: absolute;
-	top: $top
-	left: 0;
-	width: 100%;
-	height: 1px;
-	background: $color
-	content: '';
-	opacity: 0;
-	transition: all 0.4s, transform 0.4s;
-	transform: scale3d(0, 0, 0) translate3d(0, -115%, 0)
+	display: block
+	color: $color
+	position: relative
+	cursor: pointer
+
+	&:after
+		position: absolute;
+		top: $top
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: $color
+		content: '';
+		opacity: 0;
+		transition: all 0.4s, transform 0.4s;
+		transform: scale3d(0, 0, 0) translate3d(0, -115%, 0)
+
+	&:hover
+		color $color
+		text-decoration: none
+
+		&:after
+			color $color
+			text-decoration: none
+			opacity: 1;
+			transform: scale3d(1, 1, 1) translate3d(0, 0%, 0)
 
 header-3($color)
-	padding: 10px 0 10px 10px
-	font-size: 24px
+	padding: 12px 0 10px 10px
+	font-size: 22px
 	background: $color
 	color: #fff;
 
 btnMain($color,$colorBg,$colorBorder)
 	display: block
 	border 1px solid $colorBorder
-	padding: 12px;
+	padding: 10px;
 	border-radius 4px
 	color $color
 	background: $colorBg
 	text-align: center;
+	cursor: pointer
+	transition: all 0.4s, transform 0.4s;
+
+	&:hover
+		color black
+		background: transparent
+		text-decoration: none
+
+btnMainInverse($color,$colorBg,$colorBorder)
+	display: block
+	border 1px solid $colorBorder
+	padding: 10px;
+	border-radius 4px
+	color black
+	background: transparent
+	text-align: center;
+	cursor: pointer
+	transition: all 0.4s, transform 0.4s;
+
+	&:hover
+		color $color
+		background: $colorBg
+		text-decoration: none
+	&:focus
+		text-decoration: none
+
+owl-btns($color)
+	position: relative;
+	text-align: center;
+	padding: 15px 0;
+
+	&__prev
+		display: inline-block;
+		cursor: pointer
+		padding: 0 2px;
+		width: 0;
+		height: 0;
+		border-top: 10px solid transparent;
+		border-right: 20px solid $color;
+		border-bottom: 10px solid transparent;
+		position: relative;
+		top: 1px;
+
+
+		&:hover
+			border-right: 20px solid darken($color,30%);
+
+	&__next
+		display: inline-block;
+		cursor: pointer
+		padding: 0 2px;
+		width: 0;
+		height: 0;
+		border-top: 10px solid transparent;
+		border-left: 20px solid $color;
+		border-bottom: 10px solid transparent;
+		position: relative;
+		top: 1px;
+		left: 0;
+
+		&:hover
+			border-left: 20px solid darken($color,30%);

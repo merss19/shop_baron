@@ -1,6 +1,6 @@
 .sort-products
 	overflow: hidden;
-	margin-top: 45px;
+	padding: 45px 0 0 20px;
 
 	&__nav
 		width: 100%
@@ -9,14 +9,10 @@
 
 		&-item
 			display: inline-block
-			margin-right: 10px;
+			margin-right: 8px;
 
 		&-link
-			text-decoration: none
-			&:hover
-				text-decoration: none
-			&:focus
-				text-decoration: none
+			btnMainInverse(#fff,colorBlue,colorBlue)
 
 	&__items
 		overflow: hidden;
@@ -28,41 +24,8 @@
 		padding: 0 10px;
 		position: relative
 
-	.owl-buttons
-		position: relative
-		text-align: center
-
-	.owl-prev
-		display: inline-block;
-		margin-right: -1px;
-
-		&:before
-			content: "";
-			width: 0;
-			height: 0;
-			display: block
-			border-top: 10px solid transparent;
-			border-left: 20px solid colorBlue;
-			border-bottom: 10px solid transparent;
-			position: relative;
-			top: 1px;
-			left: 0;
-
-	.owl-next
-		display: inline-block;
-
-		&:after
-			content: "";
-			width: 0;
-			height: 0;
-			display: block
-			border-top: 10px solid transparent;
-			border-right: 20px solid colorBlue;
-			border-bottom: 10px solid transparent;
-			position: relative;
-			top: 1px;
-			left: -45px;
-
+	.owl-btns
+		owl-btns(colorBlue)
 
 .product
 /*	border: 1px solid #ddd;*/
@@ -71,11 +34,13 @@
 
 	&__link
 		display: block
+		position: relative
 		
 	&__image
 		height: 165px
 		overflow: hidden
 		display: block
+		text-align: center
 
 	&__img
 		height: auto;
@@ -100,8 +65,31 @@
 		font-size: 12px
 		margin-top: 3px
 
-	&__quick-view
-		position: absolute;
+	&__group
+		position: absolute
+		right: 0;
+		bottom:-7px;
+		opacity: 0
+		transform: scale3d(0, 0, 0) translate3d(0, -115%, 0)
+
+		&-item
+			width: 32px;
+			height: 32px;
+			text-align: center;
+			line-height: 32px;
+			background: colorBlue
+			color: #fff
+			border-radius 4px
+			float: left;
+			margin-right: 4px;
+			cursor: pointer
+
+			&:hover
+				background: colorOrange
+				transition: all 0.4s
+
+	&__to-cart
+		position: relative;
 		background: #fff
 		font-weight: bold
 		color: colorOrange
@@ -112,6 +100,7 @@
 		font-size: 14px
 		transition all 0.7s
 		border-radius 4px
+		text-align: center
 		transform: scale3d(0, 0, 0) translate3d(0, -115%, 0)
 
 		&:hover
@@ -120,7 +109,8 @@
 			color: #fff;
 
 			
-	&:hover .product__quick-view
+	&:hover .product__to-cart,
+	&:hover .product__group
 		opacity: 1
 		transition all 0.7s
 		cursor: pointer

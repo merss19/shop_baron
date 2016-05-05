@@ -40,6 +40,16 @@ a{
 	width: 75%
 	float: left
 
+.toggle-list
+	display: none
+
+.disabled .toggle-list
+	display: block
+
+.open >.toggle-list
+	display: block
+
+
 .tab-content
 	transition display 900ms
 	display: none;
@@ -52,16 +62,22 @@ a{
 	.btnMain
 		color #fff
 		background: colorBlue
+		
+	.description__nav-link
+		height: 42px
 
 .content
 	
 	&__main
-		padding: 50px 0
+		padding: 30px 0 15px 0;
 		
 	&__item
-		margin-top: 20px
+		//padding: 0 15px;
 
-.btnMain
+	&__side
+		padding: 30px 0 15px 0;
+
+/*.btnMain
 	display: block
 	border 1px solid colorBlue
 	padding: 12px;
@@ -74,7 +90,17 @@ a{
 	&:hover
 		background: colorBlue
 		transition all 0.5s
-		color #fff
+		color #fff*/
 
 .hidden
 	display: none
+
+.hide
+	opacity:0
+
+.more-arrow
+	color colorBlue
+	cursor: pointer
+	
+	&:hover
+		text-decoration: none

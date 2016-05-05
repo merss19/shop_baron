@@ -1,9 +1,10 @@
-mixin breadcrumb()
+mixin breadcrumb(list)
 	+b('ul').breadcrumb.clearfix
 		+e('li').item
 			+e('a').link(href = '')
 				+e('i').home.fa.fa-home
-		+e('li').item
-			+e('a').link(href = '') Смесители
-		+e('li').item
-			+e('a').link(href = '') Смеситель Grohe Eurosmart 33300001 для ванны с душем
+		each item in list
+			+e('li').item
+				+e('a').link(href = '')=item
+			//+e('li').item
+				+e('a').link(href = '') Смеситель Grohe Eurosmart 33300001 для ванны с душем

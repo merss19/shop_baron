@@ -9,23 +9,24 @@ mixin sort-products(list)
 					else
 						+e('li').nav-item.tab-item
 							+e('a').nav-link.tab-link.btnMain(href = '#{ item.href }') #{ item.sort }
+		+owl-btns()
 		each item in list
 			if item.active
 				+e.items.tab-content.active-tab(id ='#{ item.id }')
-					+e('ul').list.clearfix#car.owl-carousel
+					+e('ul').list.clearfix.owl-carousel
 						each products in item.products
 							+e('li').item
 								+b.product
 									+e('a').link
-										+e.image
+										+e('div').image
 											+e('img').img(src = '#{ products.preview }' width ="203px" height = "165px")
+										+e('div').group.clearfix
+											+e('div').group-item_wishlist.fa.fa-heart
+											+e('div').group-item_compare.fa.fa-bar-chart
 									+e.text #{ products.text }
-									//+e.country #{ products.country }
-									//+e.code Код: #{ products.code }
 									+e.price #{ products.price }
-									+e.quick-view Быстрый просмотр
-									+e.group-btn
-										+e.gro
+									+e.to-cart В корзину
+
 			else
 				+e.items.tab-content(id ='#{ item.id }')
 					+e('ul').list.clearfix
@@ -34,6 +35,9 @@ mixin sort-products(list)
 								+b.product
 									+e.image
 										+e('img').img(src = '#{ products.preview }')
+									+e('div').group.clearfix
+										+e('div').group-item_wishlist.fa.fa-heart
+										+e('div').group-item_compare.fa.fa-bar-chart
 									+e.text #{ products.text }
 									+e.price #{ products.price }
-									+e.quick-view Быстрый просмотр
+									+e.to-cart В корзину

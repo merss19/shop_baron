@@ -1,16 +1,28 @@
 mixin info-customer()
-	+b.info-customer&attributes(attributes)
+	+b.info-customer.col-sm-6&attributes(attributes)
 		+e('h3').header Информация для покупателя
 		+e('ul').list
 			+e('li').item.clearfix
-				+e.icon.fa.fa-car.col-sm-3
-				+e('a').text.col-sm-20 Доставка
+				+e.item-left
+					+e.icon.fa.fa-car
+					+e.text Доставка
+				+e.item-rigth
+					+e('a').watch(http = '#') Посмотреть
 			+e('li').item.clearfix
-				+e.icon.fa.fa-car.col-sm-3
-				+e('a').text.col-sm-20 Установка
+				+e.item-left
+					+e.icon.fa.fa-car
+					+e.text Установка
+				+e.item-rigth
+					+e('a').watch(http = '#') Посмотреть
 			+e('li').item.clearfix
-				+e.icon.fa.fa-car.col-sm-3
-				+e('a').text.col-sm-20 Подъем на этаж
+				+e.item-left
+					+e.icon.fa.fa-car
+					+e.text Подъем на этаж
+				+e.item-rigth
+					+e('a').watch(http = '#') Посмотреть
 			+e('li').item.clearfix
-				+e.icon.fa.fa-car.col-sm-3
-				+e('a').text.col-sm-20 Оплата
+				+e.item-left
+					+e.icon.fa.fa-car
+					+e.text Оплата
+				+e.item-rigth
+					+e('a').watch(http = '#') Посмотреть

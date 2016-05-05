@@ -7,19 +7,32 @@ include ../tours/tours
 include ../blocks/blocks
 include ../sort-products/sort-products
 include ../side-products/side-products
+include ../articles/articles
+include ../side-company/side-company
+include ../questions/questions
+include ../brends/brends
 include ../footer/footer
 
 mixin index()
+	- var sideBarName = ['Распродажа','Акция']
 	+b.content
 		+b.inner.clearfix
-			+b.content__side.col-25
+			+b.content__side.col-sm-3
 				+e.item
-					+side-products(getData('sort-products'))
-			+b.content__main.col-75
+					each name in ['Распродажа','Новое поступление']
+						+side-products(getData('sort-products'),name)
+				+e.item
+					+side-company()
+				+e.item
+					+questions()
+			+b.content__main.col-sm-9
 				+e.item
 					+blocks()
 				+e.item
 					+sort-products(getData('sort-products'))
+				+e.item
+					+articles()
+			+brends(getData('brends'))
 	+footer()
 	//+b.index
 		+content()

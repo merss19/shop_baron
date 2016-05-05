@@ -1,0 +1,10 @@
+mixin brends(brends)
+	+b.brends.clearfix&attributes(attributes)
+		+e('ul').list.owl-carousel
+			each brend in brends
+				+e('li').item
+					+e('a').link
+						+e.image
+							+e('img').img(src = brend width ="150px" height = "100px")
+		+e().prev.hide
+		+e().next.hide

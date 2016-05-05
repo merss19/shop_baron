@@ -3,20 +3,23 @@ include ../top/top
 include ../menu/menu
 include ../search/search
 include ../cart/cart
+include ../slider/slider
 include ../catalog-line/catalog-line
 
 mixin header(page)
+	- var page = page
 	+b('header').header
 		+top()
 		+logo-menu()
 		+b.catalog-line
 			+b.inner.clearfix
-				+b.col-sm-6
+				+b.col-sm-3
 					+catalog-line(getData('catalog'),page)
-				+b.search-line.col-sm-12
+				+b.search-line.col-sm-6
 					+search()
-				+b.cart-line.col-sm-6
+				+b.cart-line.col-sm-3
 					+cart()
-		//+menu
-
-
+				case page
+					when 'index'
+						+b.slider.col-sm-9.col-xs-12
+							+slider()

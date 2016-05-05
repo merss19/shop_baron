@@ -1,9 +1,9 @@
 mixin info-product(list)
-	+b.info-product.col-sm-15.clearfix&attributes(attributes)
+	+b.info-product.col-sm-6.clearfix&attributes(attributes)
 		+e.table
 			+e('h3').header Информация о товаре
 			+e('ul').list
 				each item in list
 						+e('li').item.clearfix
-							+e.item-name.col-sm-12=item.name
-							+e.item-value.col-sm-12=item.value
+							+e.item-name.col-xs-24.col-sm-6=item.name
+							+e.item-value.col-xs-24.col-sm-6=item.value

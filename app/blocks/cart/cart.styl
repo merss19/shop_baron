@@ -1,7 +1,4 @@
-.cart-line
-
 .cart
-	
 	&__button
 		width: 100%
 		padding: 5px 10px;
@@ -21,3 +18,65 @@
 		text-align: left;
 		float: left;
 		color #fff
+
+	&__item
+		border-bottom: 1px solid #ddd;
+		padding: 10px 0;
+
+	&__picture
+		float: left
+		width: 30%;
+		cursor: pointer
+
+	&__content
+		padding:0 10px
+		right: -1px;
+
+		&:before
+			position: relative;
+			top: -11px;
+			right: -5px;
+			border-bottom: 11px solid #fff;
+			border-left: 11px solid transparent;
+			border-right: 11px solid transparent;
+
+	&__info
+		float: left;
+		width: 70%;
+		
+		&-link
+			cursor: pointer
+			&:hover
+				text-decoration: none
+				color: colorblue
+
+	&__result
+		margin-top: 20px
+		float: left
+
+	&__delete
+		float: right;
+		background: colorRed
+		color: #fff;
+		padding: 4px 5px;
+		margin-top: 12px;
+		border-radius: 4px;
+		cursor: pointer
+
+	&__total
+		padding: 15px 10px;
+		border-bottom: 1px solid #ddd;
+
+		&-text
+			float: left
+
+		&-sum
+			float: right
+
+	&__btn
+		margin-top:10px
+
+	&__view-cart,
+	&__checkout
+		btnMain(#fff,colorBlue,colorBlue)
+		margin-bottom: 10px;

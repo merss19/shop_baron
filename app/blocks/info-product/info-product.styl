@@ -1,39 +1,20 @@
 .info-product
-	padding: 0 0 10px 10px;
+	padding: 0 10px
 	
 	&__header
 		header-3(colorBlue)
 
 	&__item
 		&:last-child
-			border-bottom: 1px colorBlue  solid;
+			border-bottom: 1px colorGreyLigth   solid;
 
 	&__item-name
 		padding: 10px;
-		border: 1px colorBlue  solid;
+		border: 1px colorGreyLigth   solid;
 		border-bottom: none;
 		border-right: none
 
 	&__item-value
 		padding: 10px;
-		border: 1px colorBlue  solid;
+		border: 1px colorGreyLigth   solid;
 		border-bottom: none;
-
-.action-group
-	padding: 0 20px
-
-	&__price
-		padding: 15px;
-		text-align: center;
-		font-size: 24px;
-		color colorOrange
-		font-weight: bold;
-
-	&__cart
-		btnMain(colorBlue,#fff,colorBlue)
-		margin-bottom: 15px
-		cursor: pointer
-
-		&:hover
-			btnMain(#fff,colorBlue,colorBlue)
-			transition all 0.4s
