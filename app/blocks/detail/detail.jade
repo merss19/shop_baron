@@ -4,6 +4,7 @@ include ../info-product/info-product
 include ../info-customer/info-customer
 include ../action-group/action-group
 include ../description/description
+include ../sort-products/sort-products
 include ../footer/footer
 
 mixin detail()
@@ -22,4 +23,6 @@ mixin detail()
 				+info-customer()
 			+b.content__item.clearfix
 				+description()
+			+b.content__item.clearfix
+				+sort-products(getData('detail-products'))
 	+footer()

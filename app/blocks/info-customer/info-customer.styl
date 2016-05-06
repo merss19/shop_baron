@@ -1,6 +1,6 @@
 .info-customer
-	padding: 0 10px
-	
+	padding: 35px 0 0 0;
+
 	&__header
 		header-3(colorBlue)
 		
@@ -35,18 +35,8 @@
 		cursor: pointer
 		position: relative
 		border-bottom: 1px dashed colorBlue;
-
-		&:after
-			linkHover(21px,colorBlue)
-
-		&:hover
-			text-decoration: none
-
-			&:after
-				color #fff
-				text-decoration: none
-				opacity: 1;
-				transform: scale3d(1, 1, 1) translate3d(0, 0%, 0)
+		linkHover(16px,colorBlue)
+		display: inline-block
 		
 	&__text
 		cursor: pointer
@@ -65,7 +55,3 @@
 				text-decoration: none
 				opacity: 1;
 				transform: scale3d(1, 1, 1) translate3d(0, 0%, 0)
-.action-group
-	padding-left: 20px
-
-//@media (min-width: 767px)

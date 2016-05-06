@@ -21,7 +21,6 @@
 		border: 1px colorGreyLigth solid;
 		text-align: center;
 		overflow: hidden;
-		min-height: 360px;
 		max-height:360px;
 		&-img
 			max-width: 450px
@@ -48,7 +47,8 @@
 
 	&__preview
 		margin-top: 60px;
-		min-height: 300px;
+		padding: 10px;
+		height: auto;
 		text-align: center;
 		vertical-align: middle;
 		width: 100%
@@ -58,79 +58,88 @@
 		&-img
 			max-width: 500px;
 			width: 100%;
+			max-height: 390px;
 
 	&__thumbnails
 		display: inline-block;
-		height: 60px;
-		margin-top: 20px;
+		margin-top: 15px;
 		min-width: 200px;
 		vertical-align: middle;
 
 		&-images
 			max-height: 60px
 			cursor: pointer
-	/*
+
+		&-item
+			width: 80px;
+			float: left;
+			overflow: hidden;
+			background: #fff;
+			padding: 5px;
+			border-right: 1px solid #ddd;
+
+/*
 .gallery
-	background rgba(0, 0, 0, 0.7)
-	bottom 0
-	left 0
-	overflow auto
-	position fixed
-	right 0
-	top 0
-	z-index 1
+background rgba(0, 0, 0, 0.7)
+bottom 0
+left 0
+overflow auto
+position fixed
+right 0
+top 0
+z-index 1
 
-	&__close
-		color #fff
-		cursor pointer
-		font-size 40px
-		position absolute
-		right 1ex
-		text-align center
-		top 0.5ex
+&__close
+	color #fff
+	cursor pointer
+	font-size 40px
+	position absolute
+	right 1ex
+	text-align center
+	top 0.5ex
 
-	&__preview
-		margin-top 60px
-		max-height 600px
-		min-height 300px
-		text-align center
+&__preview
+	margin-top 60px
+	max-height 600px
+	min-height 300px
+	text-align center
+	vertical-align middle
+	width 100%
+
+&__controls
+	text-align center
+	margin-bottom 30px
+
+
+&__thumbnails
+	display inline-block
+	height 40px
+	margin-top 20px
+	min-width 200px
+	vertical-align middle
+
+	img
+		border solid 5px transparent
 		vertical-align middle
-		width 100%
 
-	&__controls
-		text-align center
-		margin-bottom 30px
+	img.selected
+		border-color white
 
+&__control
+	background url('../img/control-sprite.png') no-repeat
+	cursor pointer
+	display inline-block
+	height 40px
+	margin-top 30px
+	opacity 0.3
+	vertical-align middle
+	width 40px
 
-	&__thumbnails
-		display inline-block
-		height 40px
-		margin-top 20px
-		min-width 200px
-		vertical-align middle
+	&:hover
+		opacity 1
 
-		img
-			border solid 5px transparent
-			vertical-align middle
+	&:active
+		transform translate(0, 1px)
 
-		img.selected
-			border-color white
-
-	&__control
-		background url('../img/control-sprite.png') no-repeat
-		cursor pointer
-		display inline-block
-		height 40px
-		margin-top 30px
-		opacity 0.3
-		vertical-align middle
-		width 40px
-
-		&:hover
-			opacity 1
-
-		&:active
-			transform translate(0, 1px)
-
-		&_right
-			background-position -40px*/
+	&_right
+		background-position -40px*/

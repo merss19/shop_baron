@@ -1,9 +1,11 @@
 .description
-	padding: 0 20px;
+	padding: 35px 0;
+
 	&__nav
 		&-list
 			border-bottom: 1px solid colorBlue
 			height: 42px;
+
 		&-item
 			float: left
 			margin-bottom: -1px;
@@ -21,6 +23,15 @@
 			background: #fff;
 			height: 35px;
 
-	&__items
+			&:hover
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
+	&__item
 		border: 1px solid colorBlue
 		border-top: none
+		padding: 15px;
+
+	&__text
+		display: none

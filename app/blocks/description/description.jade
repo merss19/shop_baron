@@ -1,3 +1,5 @@
+include ../props/props
+include ../kit/kit
 mixin description()
 	+b.description.tabs&attributes(attributes)
 		+e.nav.clearfix
@@ -7,26 +9,17 @@ mixin description()
 							+e('i').icon.fa.fa-file-text-o
 							+e('span').text Описание
 					+e('li').nav-item.tab-item
-						+e('a').nav-link.tab-link(href = '#feature')
+						+e('a').nav-link.tab-link(href = '#props')
 							+e('i').icon.fa.fa-list
 							+e('span').text Характеристики
 					+e('li').nav-item.tab-item
 						+e('a').nav-link.tab-link(href = '#kit')
-							+e('i').icon.fa.fa-comment-o
+							+e('i').icon.fa.fa-cog
 							+e('span').text Комплектация
-					+e('li').nav-item.tab-item
-						+e('a').nav-link.tab-link(href = '#reviews')
-							+e('i').icon.fa.fa-comment-o
-							+e('span').text Отзывы
-		+e#desc.items.tab-content.active-tab
-			+e('ul').list.clearfix
-				+e('li').item Описание
-		+e#feature.items.tab-content
-			+e('ul').list.clearfix
-				+e('li').item Характеристики
-		+e#kit.items.tab-content
-			+e('ul').list.clearfix
-				+e('li').item Комплектация
-		+e#reviews.items.tab-content
-			+e('ul').list.clearfix
-				+e('li').item Отзывы
+		+e#desc.item.tab-content.active-tab
+			+b().product-description.clearfix
+				+e('p').content Что такое Lorem Ipsum?Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+		+e#props.item.tab-content
+			+props(getData('props'))
+		+e#kit.item.tab-content
+			+kit(getData('kit'))

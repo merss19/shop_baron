@@ -1,7 +1,11 @@
 mixin action-group()
 	+b.action-group
 		+e.btn
-			+e.price 5450 руб
+			+e.sum
+				+e.price 5450 руб
+				+e.amount
+					+e('label').amount-label Кол-во
+					+e('input').amount-input
 			+e.cart
 				+e('a').link В корзину
 			+e.cart

@@ -1,0 +1,7 @@
+mixin kit(kit)
+	+b.kit&attributes(attributes)
+		+e('table').list
+			each item in kit
+				+e('tr').item.clearfix
+					+e('td').item-name #{ item[0]}
+					+e('td').item-value #{ item[1]}

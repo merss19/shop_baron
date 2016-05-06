@@ -18,6 +18,10 @@ mixin gallery()
 			+e.name
 			+e.preview
 				+e.preview-img(src = 'assets/images/products/faucet-1.png')
-			+e.thumbnails
-				+e('img').thumbnails-images(src = 'assets/images/products/faucet-1.png')
-				+e('img').thumbnails-images(src = 'assets/images/products/faucet-2.png')
+			+e.thumbnails.clearfix
+				+e.thumbnails-item
+					+e('img').thumbnails-images(src = 'assets/images/products/faucet-1.png')
+				+e.thumbnails-item
+					+e('img').thumbnails-images(src = 'assets/images/products/faucet-2.png')
+				+e.thumbnails-item
+					+e('img').thumbnails-images(src = 'assets/images/products/faucet-4.png')

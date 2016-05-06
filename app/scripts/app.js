@@ -143,6 +143,8 @@ $(document).ready(function() {
     });
 
 
+	//gallery
+
 
 
     $('.gallery__items ').mouseover(function(e){
@@ -161,10 +163,10 @@ $(document).ready(function() {
 		let gallery = $('.gallery-modal');
 		gallery.removeClass('hidden');
 
-		let thumbnails = $('.gallery-modal__thumbnails');
-		console.log(thumbnails);
+		var thumbnails = $('.gallery-modal__thumbnails');
 
-		$(gallery).on('click',function(e){
+
+        $(gallery).on('click',function(e){
 			let target = e.target;
 			let preview = $('.gallery-modal__preview-img');
 			let previewSrc = $(preview).attr('src');
@@ -174,6 +176,8 @@ $(document).ready(function() {
 				let targetSrc = $(target).attr('src');
 				preview.attr('src',targetSrc);
 				console.log(previewSrc);
+			}else if(targetClass == 'gallery-modal__preview-img'){
+                console.log(123);
 			}else{
 				gallery.addClass('hidden');
 			}

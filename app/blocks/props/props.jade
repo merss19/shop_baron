@@ -1,0 +1,11 @@
+mixin props(props)
+	+b.product-props.clearfix
+		+e().content
+			each prop in props
+				+b().props-group
+					+e().title #{ prop.title }
+					+e('ul').list
+						each item in prop.props
+							+e('li').item.clearfix
+								+e().item-head #{ item[0]}
+								+e().item-value #{ item[1]}
