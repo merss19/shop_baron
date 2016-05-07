@@ -1,0 +1,8 @@
+mixin sub-cat()
+	-var subCat = ["Для раковины","Для кухни","Для ванны","Для душа","Термостат","Порционные","Сенсорные","Универсальные"]
+	+b.sub-cat&attributes(attributes)
+		+e.title Смесители
+		+e('ul').list.clearfix
+			each cat in subCat
+				+e('li').item.col-xs-6.col-sm-4
+					+e('a').link=cat

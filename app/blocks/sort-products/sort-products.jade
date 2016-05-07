@@ -1,3 +1,4 @@
+include ../product/product
 mixin sort-products(list)
 	+b.sort-products.tabs&attributes(attributes)
 		+e.nav.clearfix
@@ -14,30 +15,13 @@ mixin sort-products(list)
 			if item.active
 				+e.items.tab-content.active-tab(id ='#{ item.id }')
 					+e('ul').list.clearfix.owl-carousel
-						each products in item.products
+						each product in item.products
 							+e('li').item
-								+b.product
-									+e('a').link
-										+e('div').image
-											+e('img').img(src = '#{ products.preview }' width ="203px" height = "165px")
-										+e('div').group.clearfix
-											+e('div').group-item_wishlist.fa.fa-heart
-											+e('div').group-item_compare.fa.fa-bar-chart
-									+e.text #{ products.text }
-									+e.price #{ products.price }
-									+e.to-cart В корзину
+								+product(product)
 
 			else
 				+e.items.tab-content(id ='#{ item.id }')
 					+e('ul').list.clearfix
-						each products in item.products
+						each product in item.products
 							+e('li').item
-								+b.product
-									+e.image
-										+e('img').img(src = '#{ products.preview }' width ="203px" height = "165px")
-									+e('div').group.clearfix
-										+e('div').group-item_wishlist.fa.fa-heart
-										+e('div').group-item_compare.fa.fa-bar-chart
-									+e.text #{ products.text }
-									+e.price #{ products.price }
-									+e.to-cart В корзину
+								+product(product)

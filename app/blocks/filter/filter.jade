@@ -1,23 +1,19 @@
-mixin filter()
+mixin filter(filter)
 	+b.filter&attributes(attributes)
 		+e.title Поиск по параметрам
 		+e('form').form
-			+e.form-item
-				+e.form-top.toggle-btn.filter-drop Цена
-				+e.form-bottom.toggle-list.slider sdfadf
-					//+b.slider__scale
-						//+b.slider__drag
-						//+b('span').slider__min 0
-						//+b('span').slider__max 500
-					+b('input')(type="text" id="sl" name="sl" value="")
-
-		//+e.group
-			+e('label') Город
-			+e('input').city
-		//+e.group
-			+e('label') Количество дней
-			+e('input').days
-		//+e.group
-			+e('label') Количество дней
-			+e('input').date
-		//+e('button').submit Найти
+			each item in filter
+				if item.from
+					+b.filter-item
+						+e.head #{item.head}
+						+e.from #{item.from}
+						+e.to #{item.to}
+						+b('input')(type="text" id="#{item.id}" name="#{item.id}" value="")
+				else
+					+b.filter-item
+						+e.head #{item.head}
+						+e.boxes.clearfix
+							each prop in item.items
+								+e.box.col-md-6
+									+e('input').box-input(type="checkbox",id="#{prop[1]}")
+									+e('label').box-label(for="#{prop[1]}") #{prop[0]}

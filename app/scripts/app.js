@@ -186,17 +186,68 @@ $(document).ready(function() {
 
 	});
 
-	$("#sl").ionRangeSlider({
-		type: "double",
-		grid: true,
-		min: 0,
-		max: 1000,
-		from: 200,
-		to: 800,
-		prefix: "P"
-	});
+    //filter
 
-	//$("#price").ionRangeSlider();
+    let filters = [
+        {
+            "head": "Цена",
+            "id": "price",
+            "from": 2320,
+            "to": "209400"
+        },
+        {
+            "head": "Длина",
+            "id": "len",
+            "from": "20",
+            "to": "150"
+        },
+        {
+            "head": "Ширина",
+            "id": "width",
+            "from": "4",
+            "to": "20"
+        },
+        {
+            "head": "Высота",
+            "id": "higth",
+            "from": "22",
+            "to": "120"
+        }
+    ];
+
+
+
+
+        for(let i=0; i < filters.length; i++){
+             let filter = $('#'+filters[i].id);
+
+             filter.ionRangeSlider({
+                     type: "double",
+                     grid: false,
+                     min: filters[i].from,
+                     max: filters[i].to,
+                     hide_min_max:true,
+                     hide_from_to:true,
+                     onStart: function (data) {
+                     let from = filter.parent().find('.filter__from'),
+                     to = filter.parent().find('.filter__to');
+                     from.text(data.min);
+                     to.text(data.max);
+                 }
+             });
+
+
+            filter.on("change", function () {
+                var $this = $(this),
+                    value = $this.prop("value").split(";"),
+                    from = $this.parent().find('.filter-item__from'),
+                    to = $this.parent().find('.filter-item__to');
+
+                from.text(value[0]);
+                to.text(value[1]);
+            });
+     }
+
 });
 
 
@@ -269,29 +320,27 @@ $(document).ready(function() {
 	});
 
 	//dot-dot-dot
-	function dots(selector,max,bool){
+	function dots(selector,max){
 		var productText = $(selector);
 		const maxLength = max;
+
 		for (let i = 0; i < productText.length; i++){
 
 			let text = productText[i].innerText,
                 arrow = '<a class="more-arrow fa fa-long-arrow-right"></a>',
                 result = truncate(text, maxLength);
 			productText[i].innerText = result;
-            if(!bool){
                 $(productText[i]).append(arrow);
-            }
-
 		}
 		function truncate(str, maxlength) {
 			return (str.length > maxlength) ?
 			str.slice(0, maxlength - 3) + '...' : str;
 		}
 	}
-	dots('.product__text',34);
+	dots('.product__text',42);
 	dots('.product-side__text-link',34);
     dots('.arts__item-desc',180);
-    dots('.breadcrumb__link:not(:first-of-type)',40,true);
+    dots('.breadcrumb__link:not(:first-of-type)',40);
 
 
 }(jQuery));

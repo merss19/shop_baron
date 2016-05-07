@@ -1,7 +1,47 @@
-
+[
+    {
+    "head": "Цена",
+    "id": "price",
+    "from": 2320,
+    "to": "209400"
+  },
   {
-	"country":["Германия","Великобритания","Китай","Россия","Германия"],
-	"brend":["Grohe","Grohe","Grohe","Grohe","Grohe","Grohe","Grohe","Grohe","Grohe"],
-	"collection":["Grohe","Grohe","Grohe","Grohe","Grohe","Grohe","Grohe","Grohe","Grohe"],
-	"color":["Белый","Бронза","Черный","Бежевый"]
+    "head": "Страна",
+    "id": "country",
+    "items":[["Германия","germany"],["Китай","china"],["Россия","russia"],["Германия","germany"]]
+  },
+  {
+    "head": "Производитель",
+    "id": "brend",
+    "items":[["Grohe-1","grohe-1"],["Grohe-2","grohe-2"],["Grohe-3","grohe-3"],["Grohe-4","grohe-4"],["Grohe-5","grohe-5"],["Grohe-6","grohe-6"],["Grohe-7","grohe-7"],["Grohe-8","grohe-8"]]
+  },
+  {
+    "head": "Коллекция",
+    "id": "collection",
+    "items":[["Grohe-11","grohe-11"],["Grohe-12","grohe-12"],["Grohe-13","grohe-13"],["Grohe-14","grohe-14"],["Grohe-15","grohe-15"],["Grohe-16","grohe-16"],["Grohe-17","grohe-17"],["Grohe-18","grohe-18"]]
+  },
+  {
+    "head": "Длина",
+    "id": "len",
+    "from": "20",
+    "to": "150"
+  },
+  {
+    "head": "Ширина",
+    "id": "width",
+    "from": "4",
+    "to": "20"
+  },
+  {
+    "head": "Высота",
+    "id": "higth",
+    "from": "22",
+    "to": "120"
+  },
+  {
+    "head": "Цвет",
+    "id": "color",
+    "items":[["Белый","white"],["Бронза","bronze"],["Черный","black"],["Бежевый","beige"]]
   }
+
+]

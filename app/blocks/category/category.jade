@@ -1,6 +1,9 @@
 include ../breadcrumb/breadcrumb
 include ../filter/filter
-
+include ../sub-cat/sub-cat
+include ../sort-cat/sort-cat
+include ../cat-products/cat-products
+include ../sort-products/sort-products
 mixin category()
 	-var bread  = ['Смесители']
 	+b.content
@@ -8,4 +11,10 @@ mixin category()
 			+b.content__item.clearfix
 				+breadcrumb(bread)
 			+b.content__side.col-sm-3
-				+filter()
+				+filter(getData('filter'))
+			+b.content__main.col-sm-9
+				+e.item
+					+sub-cat()
+					+sort-cat()
+					+cat-products(getData('products'))
+					+sort-products(getData('detail-products'))

@@ -1,0 +1,21 @@
+mixin sort-cat()
+	+b.sort-cat.clearfix&attributes(attributes)
+		+e.item.col-xs-12.col-sm-8
+			+e().item-label.col-xs-4
+				+e('label').item-text(for = "sort-to") Сортировать:
+			+e().item-select.col-xs-8.col-sm-6
+				+e('select').item-value#sort-to
+					+e('option').item-option(value="") По умолчанию
+					+e('option')(value="") По названию(А-Я)
+					+e('option')(value="") По названию(Я-А)
+					+e('option')(value="") По цене(по убыванию)
+					+e('option')(value="") По цене(по возрастанию)
+		+e.item.col-xs-12.col-sm-4
+			+e().item-label.col-xs-4.col-sm-6
+				+e('label').item-text(for = "watch-to") Показать:
+			+e().item-select.col-xs-8.col-sm-4
+				+e('select').item-value#watch-to
+					+e('option').item-option(value="") 100
+					+e('option')(value="") 50
+					+e('option')(value="") 25
+					+e('option')(value="") 10

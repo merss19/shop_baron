@@ -1,0 +1,7 @@
+include ../product/product
+mixin cat-products(products)
+	+b.cat-products&attributes(attributes)
+		+e('ul').list.clearfix
+			each product in products
+				+e('li').item
+					+product(product)
