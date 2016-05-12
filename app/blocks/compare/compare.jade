@@ -1,0 +1,11 @@
+include ../compare-products/compare-products
+include ../breadcrumb/breadcrumb
+mixin compare()
+	-var bread  = ['Сравнение товаров']
+	+b.content
+		+b.inner.clearfix
+			+b.content__item
+				+breadcrumb(bread)
+			+b.content__item
+				+compare-products(getData('compare-table'),getData('compare'))
+	+footer()

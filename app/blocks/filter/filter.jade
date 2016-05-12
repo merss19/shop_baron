@@ -17,3 +17,6 @@ mixin filter(filter)
 								+e.box.col-md-6
 									+e('input').box-input(type="checkbox",id="#{prop[1]}")
 									+e('label').box-label(for="#{prop[1]}") #{prop[0]}
+			+e.btns
+				+e('button').btns-show(type="button") Показать
+				+e('button').btns-clear(type="button")  Очистить

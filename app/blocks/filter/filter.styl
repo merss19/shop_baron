@@ -13,18 +13,30 @@
 		padding:10px
 
 	&__from
-		float: left;
-		padding: 7px;
+		float: left
+		padding: 7px
+		color: #fff
+		margin-top: 15px
+		background: colorBlue
+
+	&__to
+		float: right
+		padding: 7px
 		color: #fff
 		margin-top: 15px;
 		background: colorBlue
 
-	&__to
-		float: right;
-		padding: 7px;
-		color: #fff
-		margin-top: 15px;
-		background: colorBlue
+	&__btns
+		padding 15px 0;
+		border-top 1px solid colorBlue
+
+		&-show
+			btnMain(#fff,colorBlue,colorBlue)
+			width: 100%
+			margin-bottom 10px
+		&-clear
+			width: 100%
+			btnMain(#fff,colorBlue,colorBlue)
 
 .filter-item
 	&__head

@@ -1,0 +1,95 @@
+.checkout-cart
+	padding: 20px 0
+
+	&__empty
+		padding: 20px 0;
+
+	&__head
+		color: #fff
+		background: colorBlue
+		padding: 10px 25px;
+		display: inline-block
+		border-radius 4px
+
+	table.products-table
+		width: 100%
+		margin-top 15px
+
+		thead
+			display: none
+
+		tr
+			display: block
+			margin-top: 10px;
+		td,th
+			padding: 10px;
+			border: 1px solid #ddd;
+			display: block
+			text-align: right;
+
+		td
+			border-bottom: none;
+
+			&:last-child
+				border-bottom: 1px solid #ddd;
+
+
+			&::before
+				content: attr(data-title);
+				float: left;
+
+	&__total
+		float: right;
+		width: 100%;
+		margin-top: 20px;
+
+		table
+			width: 100%;
+			td
+				padding: 10px;
+				border: 1px solid #ddd;
+
+	&__btns
+		width: 100%;
+		float: left;
+		padding:20px 0
+
+		&-continue
+			float: left
+			btnMain(#fff,colorBlue,colorBlue)
+
+		&-checkout
+			float: right
+			btnMain(#fff,colorBlue,colorBlue)
+
+.products-table
+	&__photo
+		display: none
+
+		&-link
+			display: block
+			cursor: pointer
+
+	&__name
+		linkHover(20px,colorBlue)
+		color: #000
+		display: inline-block
+
+	&__amount
+		&-input
+			display: inline-block
+			height: 28px;
+			width: 50px;
+			border: 1px solid #ddd;
+			border-radius: 4px 0 0 4px;
+			text-align: center
+
+		&-delete
+			display: inline-block
+			background: colorRed;
+			color: #fff;
+			padding: 5px 5px;
+			cursor: pointer;
+			border: none
+			font-size: 18px
+			margin-left: -4px;

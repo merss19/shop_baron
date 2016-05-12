@@ -1,10 +1,10 @@
 mixin logo-menu()
 	+b.logo-menu&attributes(attributes)
 		+b.inner.clearfix
-			+b().logo.clearfix.col-xs-12.col-md-3
-				+e('a').link.learfix
+			+b('a').logo.clearfix.col-xs-12.col-md-3(href="index.html")
+				+e.link.learfix
 				+e.text.clearfix
-					+e.text-head(href = 'detail.html') Барон
+					+e.text-head Барон
 					+e.text-desc Магазин сантехники
 			+b().phone.clearfix.col-xs-12.col-md-3
 				+e.group

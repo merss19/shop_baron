@@ -1,6 +1,6 @@
 mixin cart()
 	+b.cart.dropdown
-		+e('button').button#cart-drop(data-toggle="dropdown")
+		+e('button').button#cart-drop(data-toggle="dropdown",type="button")
 			+e('i').icon.fa.fa-shopping-cart
 			+e.text
 				+e.products Количество - 1
@@ -20,7 +20,7 @@ mixin cart()
 							+e('span').result-cross x
 							+e('span').result-sum 3300
 							+e('span').result-currency руб
-						+e.delete.fa.fa-times
+						+e('button').delete.fa.fa-times(type="button")
 				+e.item.clearfix
 					+e('a').picture
 						+e('img').img(src = 'assets/images/products/faucet-1.png' width ="60px" height = "60px")
@@ -32,7 +32,7 @@ mixin cart()
 							+b('span').cross x
 							+b('span').sum 3300
 							+b('span').currency руб
-						+e.delete.fa.fa-times
+						+e('button').delete.fa.fa-times(type="button")
 				+e.total.clearfix
 					+e.total-text Сумма:
 					+e.total-sum
@@ -40,5 +40,5 @@ mixin cart()
 						+b('span').currency руб
 
 				+e.btn.clearfix
-					+e.view-cart Просмотр корзины
-					+e.checkout  Оформление заказа
+					+e('a').view-cart(href="cart.html") Просмотр корзины
+					+e('a').checkout(href="#")  Оформление заказа

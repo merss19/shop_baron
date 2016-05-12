@@ -1,0 +1,11 @@
+include /blocks/compare/compare
+extends /blocks/layout-default/layout-default
+block head
+   - var pageTitle = 'Вся сантехника';
+
+block header
+   +header('compare')
+
+block content
+   +compare()
+

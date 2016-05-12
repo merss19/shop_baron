@@ -246,7 +246,7 @@ $(document).ready(function() {
         let filterLen = filters.length;
         for(let i=0; i < filterLen; i++){
              let filter = $('#'+filters[i].id);
-
+                    console.log(filter);
              filter.ionRangeSlider({
                      type: "double",
                      grid: false,

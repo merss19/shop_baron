@@ -1,0 +1,42 @@
+[
+  {
+	"name": "Смеситель Grohe Eurosmart 33300001 для ванны с душем",
+	"image": "assets/images/products/faucet-1.png",
+    "price": "3200 руб",
+    "code": "234123",
+    "type": "смеситель",
+    "install": "На мойку",
+    "form": "Округлая",
+    "purpose": "Бытовая",
+    "mechanism": "керамический картридж",
+    "typeSupply": "Гибкая",
+    "length": "20",
+    "control": "однорычажное",
+    "shower": "Режим душ излива",
+    "weight": "есть",
+    "color": "белый",
+    "guarantee": "5 лет",
+    "country": "Россия"
+  },
+  {
+    "name": "Смеситель Grohe Eurosmart 33300003 для ванны с душем",
+    "image": "assets/images/products/faucet-1.png",
+    "price": "5600 руб",
+    "code": "678456",
+    "type": "смеситель",
+    "install": "На мойку",
+    "form": "Округлая",
+    "purpose": "Бытовая",
+    "mechanism": "керамический картридж",
+    "typeSupply": "Гибкая",
+    "length": "20",
+    "control": "однорычажное",
+    "shower": "Режим душ излива",
+    "weight": "есть",
+    "color": "белый",
+    "guarantee": "4 лет",
+    "country": "Китай"
+  }
+
+]
+

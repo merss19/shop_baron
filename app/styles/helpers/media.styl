@@ -52,6 +52,23 @@
 		&__text
 			text-align: left
 
+	.checkout-cart
+		table.products-table
+			thead
+				display: table-header-group;
+			tr
+				display: table-row
+			td,th
+				display: table-cell
+				text-align: center
+			td
+				border-bottom: 1px solid #ddd;
+
+				&::before
+					content: "";
+		&__total
+			width: 30%;
+
 	.footer
 		&-column
 			margin-bottom: 0
@@ -59,7 +76,16 @@
 	.public
 		text-align left
 
+	.products-table
+		&__photo
+			display: table-cell
+
 @media (min-width: 992px)
+	.blocks
+		&__inner
+			&:first-child
+				padding-right: 15px;
+
 	.cat-products
 		&__item
 			width: 33%;

@@ -1,0 +1,83 @@
+mixin compare-products(table,products)
+	+b.compare-products&attributes(attributes)
+		+e.title Сравнение товаров
+		+e.outer
+			+b('table').compare-table
+				+e('tbody').tbody
+					+e('tr')
+						+e('td') #{table.name}
+							each product in products
+								+e('td').name
+									+e('a').name-link #{product.name}
+					+e('tr')
+						+e('td') #{table.image}
+							each product in products
+								+e('td').td
+									+e('a').image-link
+										+e('img').img(src = '#{product.image}' width ="100px" height = "100px")
+					+e('tr')
+						+e('td') #{table.price}
+							each product in products
+								+e('td') #{product.price}
+					+e('tr')
+						+e('td') #{table.code}
+							each product in products
+								+e('td') #{product.code}
+					+e('tr')
+						+e('td') #{table.type}
+							each product in products
+								+e('td') #{product.type}
+					+e('tr')
+						+e('td') #{table.install}
+							each product in products
+								+e('td') #{product.install}
+					+e('tr')
+						+e('td') #{table.form}
+							each product in products
+								+e('td') #{product.form}
+					+e('tr')
+						+e('td') #{table.purpose}
+							each product in products
+								+e('td') #{product.purpose}
+					+e('tr')
+						+e('td') #{table.mechanism}
+							each product in products
+								+e('td') #{product.mechanism}
+					+e('tr')
+						+e('td') #{table.typeSupply}
+							each product in products
+								+e('td') #{product.typeSupply}
+					+e('tr')
+						+e('td') #{table.length}
+							each product in products
+								+e('td') #{product.length}
+					+e('tr')
+						+e('td') #{table.control}
+							each product in products
+								+e('td') #{product.control}
+					+e('tr')
+						+e('td') #{table.shower}
+							each product in products
+								+e('td') #{product.shower}
+					+e('tr')
+						+e('td') #{table.weight}
+							each product in products
+								+e('td') #{product.weight}
+					+e('tr')
+						+e('td') #{table.color}
+							each product in products
+								+e('td') #{product.color}
+					+e('tr')
+						+e('td') #{table.guarantee}
+							each product in products
+								+e('td') #{product.guarantee}
+					+e('tr')
+						+e('td') #{table.country}
+							each product in products
+								+e('td') #{product.country}
+					+e('tr')
+						+e('td')
+							each product in products
+								+e('td')
+									+e('button').to-cart(type="button") В корзину
+									+e('button').delete(type="button") Удалить

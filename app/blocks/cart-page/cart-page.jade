@@ -1,0 +1,11 @@
+include ../checkout-cart/checkout-cart
+include ../breadcrumb/breadcrumb
+mixin cart-page()
+	-var bread  = ['Корзина']
+	+b.content
+		+b.inner.clearfix
+			+b.content__item
+				+breadcrumb(bread)
+			+b.content__item
+				+checkout-cart()
+	+footer()

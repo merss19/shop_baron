@@ -1,0 +1,46 @@
+.compare-products
+	padding 20px 0
+
+	&__title
+		color #fff
+		background colorBlue
+		padding 10px 25px
+		display inline-block
+		border-radius 4px
+
+	&__outer
+		overflow auto
+
+.compare-table
+	margin 20px 0
+	width 100%;
+	min-width 800px
+
+	&__name
+
+		&-link
+			cursor: pointer
+
+			&:hover
+				text-decoration: none
+				color: colorBlue
+
+	&__image
+
+		&-link
+			display: block
+			cursor: pointer
+
+	td
+		padding 10px
+		border 1px solid #ddd
+		text-align: center
+
+	&__to-cart
+		btnMain(#fff,colorBlue,colorBlue)
+		margin-bottom 10px
+		width:100%
+
+	&__delete
+		btnMain(#fff,colorRed,colorRed)
+		width:100%
