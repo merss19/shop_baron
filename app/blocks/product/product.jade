@@ -1,11 +1,11 @@
 mixin product(product)
 	+b.product
-		+e('a').link(href="detail.html")
+		+e('a').link(href = 'detail.html')
 			+e('div').image
 				+e('img').img(src = '#{ product.preview }' width ="203px" height = "165px")
 			+e('div').group.clearfix
-				+e('div').group-item_wishlist.fa.fa-heart
-				+e('div').group-item_compare.fa.fa-bar-chart
+				+e('button').group-item_wishlist.fa.fa-heart
+				+e('button').group-item_compare.fa.fa-bar-chart
 		+e.text #{ product.text }
 		+e.price #{ product.price }
-		+e.to-cart В корзину
+		+e('button').to-cart В корзину
