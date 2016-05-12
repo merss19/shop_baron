@@ -6,6 +6,8 @@ mixin cart()
 				+e.products Количество - 1
 				+e.price Сумма - 12 000 руб.
 		+e().content.clearfix.dropdown-menu(aria-labelledby="cart-drop")
+			+e.empty.hide
+				+e('p') Ваша корзина пуста
 			+e.list
 				+e.item.clearfix
 					+e('a').picture
