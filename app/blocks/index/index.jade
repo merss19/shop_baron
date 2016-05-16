@@ -14,56 +14,32 @@ include ../brends/brends
 include ../footer/footer
 
 mixin index()
-	- var sideBarName = ['Распродажа','Акция']
+	- var sideBarName = ['Распродажа','Новое поступление']
 	+b.content
 		+b.inner.clearfix
 			+b.content__side.col-sm-3
 				+e.item
-					each name in ['Распродажа','Новое поступление']
+					//сайдбар
+					each name in sideBarName
+						//слайдер товаров в сайд баре
 						+side-products(getData('sort-products'),name)
 				+e.item
+					//блок о компании
 					+side-company()
 				+e.item
+					//блок вопросов
 					+questions()
+					//главный контент
 			+b.content__main.col-sm-9
 				+e.item
+					//инфо блок
 					+blocks()
 				+e.item
+					//слайдер товаров
 					+sort-products(getData('sort-products'))
 				+e.item
+					// блок статьи
 					+articles()
+					//слайдер брендов
 			+brends(getData('brends'))
 	+footer()
-	//+b.index
-		+content()
-			.index__group
-				+subtitle()
-					| ЧТО В КОРОБКЕ
-
-			+heading()
-				| Инструменты
-
-			.index__group
-				+list(getData('tools'))
-
-			.index__group
-				+subtitle()
-					| СТРУКТУРА ФАЙЛОВ
-
-			+container()
-				+col()
-					+heading()
-						| Исходники
-					+tree(getData('source-tree'))
-
-				+col()
-					.index__arrow
-						+arrow()
-							| Сборка
-
-				+col()
-					+heading()
-						| Готовые файлы
-					+tree(getData('build-tree'))
-
-			+fork()

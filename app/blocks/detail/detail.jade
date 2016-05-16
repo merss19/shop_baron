@@ -12,17 +12,24 @@ mixin detail()
 	+b.content
 		+b.inner.clearfix
 			+b.content__item.clearfix
+				//навигация
 				+breadcrumb(bread)
 			+b('h1').header-product Смеситель Grohe Eurosmart 33300001 для ванны с душем
 			+b.content__item.clearfix
+				//фото товара
 				+gallery()
 				+b.col-sm-6
+					//блок для товара
 					+action-group()
 			+b.content__item.clearfix
+				//инфо о товаре
 				+info-product(getData('info-product'))
+				//инфо для покупателя
 				+info-customer()
 			+b.content__item.clearfix
+				//блок описания товара
 				+description()
 			+b.content__item.clearfix
+				//сладйер товаров
 				+sort-products(getData('detail-products'))
 	+footer()

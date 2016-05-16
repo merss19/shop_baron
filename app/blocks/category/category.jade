@@ -9,13 +9,21 @@ mixin category()
 	+b.content
 		+b.inner.clearfix
 			+b.content__item.clearfix
+				//навигация(хлебные крошки)
 				+breadcrumb(bread)
+				//сайд бар
 			+b.content__side.col-sm-3
+				//фильтр
 				+filter(getData('filter'))
+				//галвный контент
 			+b.content__main.col-sm-9
 				+e.item
+					//суб категории
 					+sub-cat()
+					//фильтр категорий
 					+sort-cat()
+					//вывод товаров
 					+cat-products(getData('products'))
+					//слайдер товаров
 					+sort-products(getData('detail-products'))
 	+footer()
